@@ -14,17 +14,50 @@
 <!-- start code here -->
 <body>
   <form action="/grade10test" method="post">
-    <label>
-      <input type="radio" name="color" value="red" required /> Red
-    </label>
+    {% for question in questions %}
+    <div class="question">
+      <p>{{question['no']}} . {{question['question']}}</p>
+      <br />
+      {% for choice in question['choices'].items() %}
+      <label>
+        <input type="radio" name="{{question['no']}}" value="{{choice[0]}}" {%
+        if choice[0] == 'a' %}checked{% endif %}/>
+        <!--  -->
+        {{choice[1]}}
+        <!--  --> </label
+      ><br />
+      {% endfor %}
+    </div>
 
-    <label> <input type="radio" name="color" value="blue" /> Blue </label>
+    {% endfor %}
+    <!-- <div class="question">
+      <p>1. What is the capital of France?</p>
+      <label>
+          <input type="radio" name="q1" value="a"> a) Paris
+      </label>
+      <label>
+          <input type="radio" name="q1" value="b"> b) London
+      </label>
+      <label>
+          <input type="radio" name="q1" value="c"> c) Berlin
+      </label>
+  </div>
 
-    <label> <input type="radio" name="color" value="green" /> Green </label>
-
-    <br />
+  <div class="question">
+      <p>2. Which planet is known as the Red Planet?</p>
+      <label>
+          <input type="radio" name="q2" value="a"> a) Earth
+      </label>
+      <label>
+          <input type="radio" name="q2" value="b"> b) Mars
+      </label>
+      <label>
+          <input type="radio" name="q2" value="c"> c) Venus
+      </label>
+  </div> -->
 
     <input type="submit" value="Submit" />
+    <a href="/entrance">Back</a>
   </form>
 </body>
 {% endblock %}

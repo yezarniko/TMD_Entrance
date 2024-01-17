@@ -1,0 +1,52 @@
+[
+  {
+    "no": 1,
+    "question": "What is the capital of France?",
+    "choices": {
+      "a": "Paris",
+      "b": "London",
+      "c": "Berlin"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "no": 2,
+    "question": "Which planet is known as the Red Planet?",
+    "choices": {
+      "a": "Venus",
+      "b": "Mars",
+      "c": "Jupiter"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "no": 3,
+    "question": "What is the largest mammal on Earth?",
+    "choices": {
+      "a": "Elephant",
+      "b": "Blue Whale",
+      "c": "Giraffe"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "no": 4,
+    "question": "Who wrote 'Romeo and Juliet'?",
+    "choices": {
+      "a": "Charles Dickens",
+      "b": "William Shakespeare",
+      "c": "Jane Austen"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "no": 5,
+    "question": "What is the chemical symbol for gold?",
+    "choices": {
+      "a": "Au",
+      "b": "Ag",
+      "c": "Fe"
+    },
+    "correct_answer": "a"
+  }
+]

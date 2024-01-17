@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+<!-- title -->
+{% block title %}Result Page{% endblock %}
+<!--  -->
+
+<!-- style  -->
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}" />
+{% endblock %}
+<!--  -->
+
+<!--  -->
+{% block content %}
+<!-- start code here -->
+<body>
+  <h4>Your answers</h4>
+  {% for question_num, ans in answers %}
+  <!--  -->
+  {{question_num }}. {{ans}}
+  <!--  -->
+  {% if ans == correct_answers[question_num|int-1] %}
+  <span style="color: green">✔</span>
+  {% else %}
+  <span style="color: red">❌</span>
+  {%endif%}
+  <!--  -->
+  <br />
+  {% endfor %}
+
+  <a href="/grade10test">Back</a>
+</body>
+{% endblock %}

@@ -1,4 +1,10 @@
 from flask import Flask, render_template, request
+import json
+
+
+with open('grade10_questions.json', 'r') as file:
+    grade10_questions = json.load(file)
+
 
 app = Flask("TMD_Entrance")
 
@@ -15,10 +21,11 @@ def entrance():
 @app.route('/grade10test/', methods=['GET', 'POST'])
 def grade10_test():
     if request.method == 'GET':
-        return render_template('g10test.html')
+        return render_template('g10test.html', questions=grade10_questions)
     elif request.method == 'POST':
-        print(request.form.get('color'))
-        return render_template('g10test.html')
+        correct_answers = [q['correct_answer'] for q in grade10_questions] 
+        return render_template('result.html', answers=request.form.items(),
+                                correct_answers=correct_answers)
 
 
 @app.route('/grade11test/', methods=['GET', 'POST'])
