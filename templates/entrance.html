@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+<!-- title -->
+{% block title %}Entrance{% endblock %}
+<!--  -->
+
+<!-- style  -->
+{% block style %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='entrance.css') }}"
+/>
+{% endblock %}
+<!--  -->
+
+<!--  -->
+{% block content %}
+<!-- start code here -->
+<body>
+  <div class="header">
+    <h1>TMD ENTRANCE</h1>
+  </div>
+
+  <div class="image-container">
+    <div class="image">
+      <img
+        src="{{ url_for('static', filename='img/g10.png') }}"
+        alt="Image 1"
+      />
+      <div class="overlay">
+        <a href="/grade10test">
+          <button class="hover-button">Hover me</button>
+        </a>
+        <p class="overlay-text">Overlay Text 1</p>
+      </div>
+    </div>
+
+    <div class="image">
+      <img
+        src="{{ url_for('static', filename='img/g10.png') }}"
+        alt="Image 2"
+      />
+      <div class="overlay">
+        <a href="/grade11test">
+          <button class="hover-button">Hover me</button>
+        </a>
+        <p class="overlay-text">Overlay Text 2</p>
+      </div>
+    </div>
+
+    <div class="image">
+      <img
+        src="{{ url_for('static', filename='img/g10.png') }}"
+        alt="Image 3"
+      />
+      <div class="overlay">
+        <a href="/quiz">
+          <button class="hover-button">Hover me</button>
+        </a>
+        <p class="overlay-text">Overlay Text 3</p>
+      </div>
+    </div>
+  </div>
+</body>
+{% endblock %}

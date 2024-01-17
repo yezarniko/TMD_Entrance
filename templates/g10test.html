@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+<!-- title -->
+{% block title %}Grade 10 Test{% endblock %}
+<!--  -->
+
+<!-- style  -->
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='g10test.css') }}" />
+{% endblock %}
+<!--  -->
+
+<!--  -->
+{% block content %}
+<!-- start code here -->
+<body>
+  <form action="/grade10test" method="post">
+    <label>
+      <input type="radio" name="color" value="red" required /> Red
+    </label>
+
+    <label> <input type="radio" name="color" value="blue" /> Blue </label>
+
+    <label> <input type="radio" name="color" value="green" /> Green </label>
+
+    <br />
+
+    <input type="submit" value="Submit" />
+  </form>
+</body>
+{% endblock %}
